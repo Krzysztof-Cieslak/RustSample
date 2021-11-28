@@ -1,0 +1,30 @@
+{"id":0,"type":"vertex","label":"metaData","version":"0.5.0","projectRoot":"file:///home/runner/work/RustSample/RustSample/.Cargo.toml","positionEncoding":"utf-16","toolInfo":{"name":"rust-analyzer","version":"183ef04 2021-11-27 dev"}}
+{"id":1,"type":"vertex","label":"document","uri":"file:///home/runner/work/RustSample/RustSample/src/main.rs","languageId":"rust"}
+{"id":2,"type":"vertex","label":"foldingRangeResult","result":[{"startLine":0,"startCharacter":10,"endLine":2,"endCharacter":1}]}
+{"id":3,"type":"edge","label":"textDocument/foldingRange","inV":2,"outV":1}
+{"id":4,"type":"vertex","label":"range","start":{"line":0,"character":3},"end":{"line":0,"character":7}}
+{"id":5,"type":"vertex","label":"resultSet"}
+{"id":6,"type":"edge","label":"next","inV":5,"outV":4}
+{"id":7,"type":"vertex","label":"range","start":{"line":1,"character":4},"end":{"line":1,"character":11}}
+{"id":8,"type":"vertex","label":"resultSet"}
+{"id":9,"type":"edge","label":"next","inV":8,"outV":7}
+{"id":10,"type":"edge","label":"contains","inVs":[4,7],"outV":1}
+{"id":11,"type":"vertex","label":"hoverResult","result":{"contents":{"kind":"markdown","value":"\n```rust\nRustSample\n```\n\n```rust\nfn main()\n```"}}}
+{"id":12,"type":"edge","label":"textDocument/hover","inV":11,"outV":5}
+{"id":13,"type":"vertex","label":"definitionResult"}
+{"id":14,"type":"edge","label":"item","document":1,"inVs":[4],"outV":13}
+{"id":15,"type":"edge","label":"textDocument/definition","inV":13,"outV":5}
+{"id":16,"type":"vertex","label":"referenceResult"}
+{"id":17,"type":"edge","label":"textDocument/references","inV":16,"outV":5}
+{"id":18,"type":"edge","label":"item","document":1,"property":"definitions","inVs":[4],"outV":16}
+{"id":19,"type":"vertex","label":"hoverResult","result":{"contents":{"kind":"markdown","value":"\n```rust\nstd\n```\n\n```rust\n#[macro_export] macro_rules! println\n```\n\n---\n\nPrints to the standard output, with a newline.\n\nOn all platforms, the newline is the LINE FEED character (`\\n`/`U+000A`) alone\n(no additional CARRIAGE RETURN (`\\r`/`U+000D`)).\n\nUse the [`format!`](`format!`) syntax to write data to the standard output.\nSee [`std::fmt`](crate::fmt) for more information.\n\nUse `println!` only for the primary output of your program. Use\n[`eprintln!`](`eprintln!`) instead to print error and progress messages.\n\n# Panics\n\nPanics if writing to [`io::stdout`](crate::io::stdout) fails.\n\n# Examples\n\n```rust\nprintln!(); // prints just a newline\nprintln!(\"hello there!\");\nprintln!(\"format {} arguments\", \"some\");\n```"}}}
+{"id":20,"type":"edge","label":"textDocument/hover","inV":19,"outV":8}
+{"id":21,"type":"vertex","label":"definitionResult"}
+{"id":22,"type":"vertex","label":"document","uri":"file:///usr/share/rust/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/macros.rs","languageId":"rust"}
+{"id":23,"type":"vertex","label":"range","start":{"line":93,"character":13},"end":{"line":93,"character":20}}
+{"id":24,"type":"edge","label":"contains","inVs":[23],"outV":22}
+{"id":25,"type":"edge","label":"item","document":22,"inVs":[23],"outV":21}
+{"id":26,"type":"edge","label":"textDocument/definition","inV":21,"outV":8}
+{"id":27,"type":"vertex","label":"referenceResult"}
+{"id":28,"type":"edge","label":"textDocument/references","inV":27,"outV":8}
+{"id":29,"type":"edge","label":"item","document":1,"property":"references","inVs":[7],"outV":27}
