@@ -27,4 +27,10 @@ jobs:
           BRANCH: lsif-index
           FOLDER: lsif_index
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload LSIF as Action Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: index.lsif
+          path: lsif_index/index.lsif
+      
 
