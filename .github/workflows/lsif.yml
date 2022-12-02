@@ -20,13 +20,6 @@ jobs:
       - run: mkdir lsif_index
       - name: Generate LSIF
         run: rustup run nightly rust-analyzer lsif .\Cargo.toml > lsif_index/index.lsif
-      - name: Publish LSIF
-        uses: s0/git-publish-subdir-action@develop
-        env:
-          REPO: self
-          BRANCH: lsif-index
-          FOLDER: lsif_index
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload LSIF as Action Artifact
         uses: actions/upload-artifact@v3
         with:
